@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love</title>
+    <style>
+        /* Importing beautiful fonts from Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lora:ital,wght@0,400;1,400&display=swap');
+
+        /* Basic reset and full-page styling */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Prevents scrollbars */
+        }
+
+        body {
+            /* A soft, romantic, animated gradient background */
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            
+            /* Using Flexbox to perfectly center the content */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Lora', serif;
+            color: #333;
+        }
+
+        /* The animation for the background gradient */
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* The main container for your message */
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            text-align: center;
+            backdrop-filter: blur(5px); /* Adds a modern, soft look */
+        }
+
+        /* The floating love logo */
+        .love-logo {
+            font-size: 80px;
+            font-family: 'Dancing Script', cursive;
+            color: #e73c7e;
+            margin-bottom: 20px;
+            
+            /* The floating animation */
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* The keyframes for the floating effect */
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* Styling for the main heading */
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5em;
+            color: #d63384;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        /* Styling for the paragraphs of your message */
+        p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        /* To make the final plea stand out */
+        .final-plea {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #c21e56;
+        }
+
+        /* A simple closing signature */
+        .signature {
+            margin-top: 30px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8em;
+            color: #555;
+        }
+
+        /* Music Player Styles */
+        .music-player {
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        #playButton {
+            background-color: #fff;
+            border: 2px solid #e73c7e;
+            border-radius: 50px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #e73c7e;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Lora', serif;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(231, 60, 126, 0.2);
+        }
+
+        #playButton:hover {
+            background-color: #e73c7e;
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        /* --- NEW: Footer Styles --- */
+        footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+            font-family: 'Lora', serif;
+            font-size: 0.9em;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Shadow for readability */
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- The Floating Love Logo -->
+        <div class="love-logo">❤️</div>
+
+        <!-- The Heartfelt Message -->
+        <h1>My Dearest Love</h1>
+
+        <p>
+            I am writing this with the heaviest of hearts, needing to say the words I should have said before: <strong>I am so, so sorry.</strong>
+        </p>
+
+        <p>
+            I know I went against our agreement. There is no excuse for my actions, and I take full responsibility. I was so wrong. In that moment, I failed to be the partner you deserve, and I broke the sacred trust we built together.
+        </p>
+
+        <p>
+            Through all the difficulties we have faced, my love for you has been the one constant, the true north of my life. Please believe me when I say that my terrible mistake was not a reflection of my love for you. My love for you is immense, it is real, and it is enduring.
+        </p>
+
+        <p>
+            I love you from the very bottom of my heart, more than words can ever express. The thought of having hurt you is unbearable, and I would give anything to take back my mistake.
+        </p>
+
+        <p class="final-plea">
+            You are my everything. I am willing to do whatever it takes to earn back your trust and show you that my heart is, and always will be, completely yours. Please, my love, can you find it in your heart to forgive me?
+        </p>
+
+        <!-- The Music Player -->
+        <div class="music-player">
+            <!-- 
+              STEP 1: Place your song file (e.g., "our-song.mp3") in the same folder as this HTML file.
+              STEP 2: Change "your-song.mp3" below to the name of your song file.
+            -->
+            <audio id="loveSong" src="your-song.mp3"></audio>
+            <button id="playButton">▶ Play Our Song</button>
+        </div>
+
+        <div class="signature">
+            All my love, always.
+        </div>
+    </div>
+
+    <!-- --- NEW: The Footer --- -->
+    <footer>Made by Ignatius</footer>
+
+    <!-- JavaScript for the Music Player -->
+    <script>
+        // Get the audio element and the button
+        const loveSong = document.getElementById('loveSong');
+        const playButton = document.getElementById('playButton');
+
+        // Set a nice, moderate volume
+        loveSong.volume = 0.5;
+
+        // Add a click event listener to the button
+        playButton.addEventListener('click', function() {
+            // Check if the song is paused
+            if (loveSong.paused) {
+                // If paused, play the song
+                loveSong.play();
+                // Change the button text to 'Pause'
+                playButton.innerHTML = '❚❚ Pause';
+            } else {
+                // If playing, pause the song
+                loveSong.pause();
+                // Change the button text back to 'Play'
+                playButton.innerHTML = '▶ Play Our Song';
+            }
+        });
+
+        // Optional: Reset the button when the song ends
+        loveSong.addEventListener('ended', function() {
+            playButton.innerHTML = '▶ Play Our Song';
+        });
+    </script>
+
+</body>
+</html>
